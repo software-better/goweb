@@ -11,9 +11,6 @@ func process(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	server := http.Server{
-		Addr: "0.0.0.0:8090",
-	}
 	http.HandleFunc("/process", process)
 	server.ListenAndServe()
 }
