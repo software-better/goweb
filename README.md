@@ -9,12 +9,17 @@ The build is taken care of by naive Dockerfile and build-run.sh bash script.
 I would like to mimic the approach used in [go-image-test](https://gitlab.com/sirile/go-image-test) but the 
 centurylink/golang-builder step creates a container that does not run properly.
 
+~~~bash
+#build-run.sh
+docker build -t goweb .
+~~~
+
 ## Running
 
 After that running the container can be done with
 
 ~~~bash
-
+docker run -it --rm -p 8300:8300 --name goweb goweb
 ~~~
 
 ## Building with golang-builder (to be steps):
