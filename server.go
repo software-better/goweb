@@ -1,4 +1,4 @@
-package main // import "github.com/software-better/goweb"
+package main
 
 import (
 	"html/template"
@@ -11,6 +11,10 @@ func process(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	server := http.Server{
+		Addr: "0.0.0.0:8300",
+	}
+
 	http.HandleFunc("/process", process)
 	server.ListenAndServe()
 }
