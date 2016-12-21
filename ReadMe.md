@@ -1,0 +1,2 @@
+# goweb
+sample go application
