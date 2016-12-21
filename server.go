@@ -1,4 +1,4 @@
-package main // import github.com/software-better/goweb
+package main // import "github.com/software-better/goweb"
 
 import (
 	"html/template"
